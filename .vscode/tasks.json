@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ 生成活动文件",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/MPC.cpp",
+                "-o",
+                "${workspaceFolder}/MPC.out",
+                "-I/home/tommy/MPC/qpOASES/include",  // 注意这里
+                "-L/home/tommy/MPC/qpOASES/lib",      // 注意这里
+                "-lqpOASES"                   // 指定链接的库名称
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
